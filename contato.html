@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Café Gourmet</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; background-color: #f8f8f8; }
+
+        header { background-color: #6B4226; color: white; padding: 1rem; text-align: center; }
+        header h1 { font-size: 2rem; }
+        header nav a { color: white; margin: 0 1rem; text-decoration: none; font-weight: bold; }
+        header nav a:hover { color: #FFD700; }
+
+        footer { background-color: #333; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
+
+        h2 { color: #6B4226; font-size: 1.8rem; margin-bottom: 1rem; text-align: center; }
+
+        .container { width: 90%; max-width: 1000px; margin: 2rem auto; }
+        .contato { background-color: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center; }
+
+        form { display: flex; flex-direction: column; align-items: center; }
+        form label, form input, form textarea { width: 100%; max-width: 500px; margin-bottom: 1rem; padding: 0.5rem; border: 1px solid #ddd; border-radius: 5px; }
+        form textarea { resize: vertical; }
+
+        .informacoes-contato { text-align: left; max-width: 400px; margin: 2rem auto; }
+
+        button { background-color: #6B4226; color: white; padding: 0.5rem 1rem; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem; transition: background-color 0.3s; }
+        button:hover { background-color: #3E2B1A; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Café Gourmet</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="contato.html">Contato</a>
+            <a href="acompanhar_pedido.html">Acompanhar Pedido</a>
+        </nav>
+    </header>
+
+    <div class="container contato">
+        <h2>Fale Conosco</h2>
+        <p>Entre em contato conosco preenchendo o formulário abaixo ou utilizando nossos canais de atendimento.</p>
+        
+        <form action="enviar_contato.php" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+
+        <div class="informacoes-contato">
+            <h3>Informações de Contato</h3>
+            <p><strong>Telefone:</strong> (11) 1234-5678</p>
+            <p><strong>Email:</strong> contato@cafegourmet.com.br</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Café Gourmet - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
